@@ -1,38 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Stick&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: #2c2c2c;
+}
+
 .App {
+  margin: auto;
+  height: 100vh;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12.5px
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #FCFF8F;
+  font-family: 'Stick', sans-serif !important;
+}
+
+span {
+  color: #e1e1e1;
+}
+
+p {
+  color: #fff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+i {
+  margin-left: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  padding: 10px 20px;
+  border: none;
+  background: #FCFF8F;
+  color: #2c2c2c;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button:hover {
+  opacity: .9;
+  box-shadow: 0px 0px 2.5px 2.5px rgba(255,255,255,.25)
 }
 
-.App-link {
-  color: #61dafb;
+button:focus {
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.go {
+  color: #e7e7e7;
+}
+
+.hl {
+  color: #FCFF8F;
+}
+
+a {
+  color: #fff;
+}
+
+a:hover {
+  opacity: .9;
+}
+
+.ft {
+  color: #e1e1e1 !important;
+  position: absolute;
+  bottom: 15px;
+  font-size: .8rem;
 }

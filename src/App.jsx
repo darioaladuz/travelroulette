@@ -73,7 +73,7 @@ function App() {
           onChange={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
           // onChange={() => setDark((prev) => !prev)}
         />
-      <h1>Travel <span style={{ color: "var(--main)" }}>Roulette</span> <i className="fas fa-route"></i></h1>
+      <h1>Travel<span style={{ color: "var(--main)" }}>Roulette</span> <i className="fas fa-route"></i></h1>
       <p>Click the button to retrieve one of the <span>128.769</span> cities available in our database and the Google Maps url for the city. Bon voyage!</p>
       <button onClick={clickMe}>Generate</button>
       <div className="go">Let&apos;s go to... { render.name && <><span className='hl' style={{ fontWeight: "900" }}>{render.name}, {render.code}</span> <span className={`fi fi-${render.code.toLowerCase()}`}></span> </>}</div>

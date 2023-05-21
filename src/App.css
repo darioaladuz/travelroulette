@@ -1,84 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Stick&display=swap');
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-}
-
-body {
-  background: #2c2c2c;
+  transition: background-color .1s ease, color .1s ease;
 }
 
 .App {
-  margin: auto;
-  height: 100vh;
-  width: 80%;
+  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  gap: 12.5px
-}
-
-h1 {
-  font-size: 2.2rem;
-  color: #FCFF8F;
-  font-family: 'Stick', sans-serif !important;
-}
-
-span {
-  color: #e1e1e1;
-}
-
-p {
-  color: #fff;
+  gap: 16px;
+  align-items: center;
+  padding: 32px 16px;
   text-align: center;
-}
-
-i {
-  margin-left: 10px;
-}
-
-button {
-  padding: 10px 20px;
-  border: none;
-  background: #FCFF8F;
-  color: #2c2c2c;
-  border-radius: 12px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-button:hover {
-  opacity: .9;
-  box-shadow: 0px 0px 2.5px 2.5px rgba(255,255,255,.25)
-}
-
-button:focus {
-  outline: none;
-}
-
-.go {
-  color: #e7e7e7;
-}
-
-.hl {
-  color: #FCFF8F;
+  background-color: var(--background);
+  color: var(--text);
 }
 
 a {
-  color: #fff;
+  color: var(--main);
 }
 
 a:hover {
-  opacity: .9;
+  color: var(--anchor-hover)
 }
 
-.ft {
-  color: #e1e1e1 !important;
-  position: absolute;
-  bottom: 15px;
-  font-size: .8rem;
+button {
+  background-color: var(--button);
+  color: var(--text);
+}
+
+button:hover {
+  border: 1px solid var(--main);
+}
+
+.map {
+  min-height: 500px;
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.leaflet-container {
+  height: 100% !important;
+  width: 100% !important;
+  flex: 1 !important;
+}
+
+.go {
+  display: flex;
+  align-items: center;
+  gap: 1ch;
+  font-size: 20px;
+}
+
+.go .fi {
+  font-size: 40px;
 }

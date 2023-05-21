@@ -10,7 +10,10 @@ function App() {
   const [render, setRender] = useState({name: '', code: '', lat: '', lng: ''});
   const [showMap, setShowMap] = useState(false);
   const [mapLoading, setMapLoading] = useState(false);
-  const [theme, setTheme] = useState("light");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  const [dark, setDark] = useState(prefersDark);
+
   const themes = {
     dark: {
       "--background": "#000",
@@ -66,11 +69,11 @@ function App() {
   }
 
   return (
-    <div style={themes[theme]} className="App">
+    <div style={themes[dark ? "dark" : "light"]} className="App">
       <ThemeToggle
-          isDark={theme === 'dark'}
+          isDark={dark}
           invertedIconLogic
-          onChange={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+          onChange={() => setDark(!dark)}
           // onChange={() => setDark((prev) => !prev)}
         />
       <h1>Travel<span style={{ color: "var(--main)" }}>Roulette</span> <i className="fas fa-route"></i></h1>
@@ -82,7 +85,7 @@ function App() {
       {
         mapLoading &&
         <RotatingLines
-          strokeColor={themes[theme]["--main"]}
+          strokeColor={themes[dark ? "dark" : "light"]["--main"]}
           strokeWidth="5"
           animationDuration="0.75"
           width="96"
